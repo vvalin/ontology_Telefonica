@@ -1,0 +1,197 @@
+Prefix(:=<http://www.pizza.com/ontologies/pizza.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.pizza.com/ontologies/pizza.owl>
+Annotation(rdfs:comment "The pizza ontology that describes various puzzas based on they toppings"@en)
+
+Declaration(Class(:AchovyTopping))
+Declaration(Class(:CaperTopping))
+Declaration(Class(:CheeseTopping))
+Declaration(Class(:DeepPanBase))
+Declaration(Class(:GreenPepperTopping))
+Declaration(Class(:HamTopping))
+Declaration(Class(:JalapenoPepperTopping))
+Declaration(Class(:MeatTopping))
+Declaration(Class(:MozarrellaTopping))
+Declaration(Class(:MushroomTopping))
+Declaration(Class(:OliveTopping))
+Declaration(Class(:OnionTopping))
+Declaration(Class(:ParmezanTopping))
+Declaration(Class(:PepperTopping))
+Declaration(Class(:PepperoniTopping))
+Declaration(Class(:Pizza))
+Declaration(Class(:PizzaBase))
+Declaration(Class(:PizzaTopping))
+Declaration(Class(:PrawnTopping))
+Declaration(Class(:RedPepperTopping))
+Declaration(Class(:SalamiTopping))
+Declaration(Class(:SeafoodTopping))
+Declaration(Class(:SpicyBeefTopping))
+Declaration(Class(:ThinAndCrispyBase))
+Declaration(Class(:TomatoTopping))
+Declaration(Class(:TunaTopping))
+Declaration(Class(:VegetableTopping))
+Declaration(ObjectProperty(:hasBase))
+Declaration(ObjectProperty(:hasIngredient))
+Declaration(ObjectProperty(:hasTopping))
+Declaration(ObjectProperty(:isBaseOf))
+Declaration(ObjectProperty(:isIngredientOf))
+Declaration(ObjectProperty(:isToppingOf))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: :hasBase (:hasBase)
+
+SubObjectPropertyOf(:hasBase :hasIngredient)
+InverseObjectProperties(:hasBase :isBaseOf)
+FunctionalObjectProperty(:hasBase)
+
+# Object Property: :hasIngredient (:hasIngredient)
+
+InverseObjectProperties(:hasIngredient :isIngredientOf)
+TransitiveObjectProperty(:hasIngredient)
+
+# Object Property: :hasTopping (:hasTopping)
+
+SubObjectPropertyOf(:hasTopping :hasIngredient)
+InverseObjectProperties(:hasTopping :isToppingOf)
+
+# Object Property: :isBaseOf (:isBaseOf)
+
+SubObjectPropertyOf(:isBaseOf :isIngredientOf)
+
+# Object Property: :isIngredientOf (:isIngredientOf)
+
+TransitiveObjectProperty(:isIngredientOf)
+
+# Object Property: :isToppingOf (:isToppingOf)
+
+SubObjectPropertyOf(:isToppingOf :isIngredientOf)
+
+
+############################
+#   Classes
+############################
+
+# Class: :AchovyTopping (:AchovyTopping)
+
+SubClassOf(:AchovyTopping :SeafoodTopping)
+
+# Class: :CaperTopping (:CaperTopping)
+
+SubClassOf(:CaperTopping :VegetableTopping)
+
+# Class: :CheeseTopping (:CheeseTopping)
+
+SubClassOf(:CheeseTopping :PizzaTopping)
+
+# Class: :DeepPanBase (:DeepPanBase)
+
+SubClassOf(:DeepPanBase :PizzaBase)
+DisjointClasses(:DeepPanBase :ThinAndCrispyBase)
+
+# Class: :GreenPepperTopping (:GreenPepperTopping)
+
+SubClassOf(:GreenPepperTopping :PepperTopping)
+
+# Class: :HamTopping (:HamTopping)
+
+SubClassOf(:HamTopping :MeatTopping)
+
+# Class: :JalapenoPepperTopping (:JalapenoPepperTopping)
+
+SubClassOf(:JalapenoPepperTopping :PepperTopping)
+
+# Class: :MeatTopping (:MeatTopping)
+
+SubClassOf(:MeatTopping :PizzaTopping)
+
+# Class: :MozarrellaTopping (:MozarrellaTopping)
+
+SubClassOf(:MozarrellaTopping :CheeseTopping)
+DisjointClasses(:MozarrellaTopping :ParmezanTopping)
+
+# Class: :MushroomTopping (:MushroomTopping)
+
+SubClassOf(:MushroomTopping :VegetableTopping)
+
+# Class: :OliveTopping (:OliveTopping)
+
+SubClassOf(:OliveTopping :VegetableTopping)
+
+# Class: :OnionTopping (:OnionTopping)
+
+SubClassOf(:OnionTopping :VegetableTopping)
+
+# Class: :ParmezanTopping (:ParmezanTopping)
+
+SubClassOf(:ParmezanTopping :CheeseTopping)
+
+# Class: :PepperTopping (:PepperTopping)
+
+SubClassOf(:PepperTopping :VegetableTopping)
+
+# Class: :PepperoniTopping (:PepperoniTopping)
+
+SubClassOf(:PepperoniTopping :MeatTopping)
+
+# Class: :Pizza (:Pizza)
+
+
+# Class: :PizzaBase (:PizzaBase)
+
+
+# Class: :PizzaTopping (:PizzaTopping)
+
+
+# Class: :PrawnTopping (:PrawnTopping)
+
+SubClassOf(:PrawnTopping :SeafoodTopping)
+
+# Class: :RedPepperTopping (:RedPepperTopping)
+
+SubClassOf(:RedPepperTopping :PepperTopping)
+
+# Class: :SalamiTopping (:SalamiTopping)
+
+SubClassOf(:SalamiTopping :MeatTopping)
+
+# Class: :SeafoodTopping (:SeafoodTopping)
+
+SubClassOf(:SeafoodTopping :PizzaTopping)
+
+# Class: :SpicyBeefTopping (:SpicyBeefTopping)
+
+SubClassOf(:SpicyBeefTopping :MeatTopping)
+
+# Class: :ThinAndCrispyBase (:ThinAndCrispyBase)
+
+SubClassOf(:ThinAndCrispyBase :PizzaBase)
+
+# Class: :TomatoTopping (:TomatoTopping)
+
+SubClassOf(:TomatoTopping :VegetableTopping)
+
+# Class: :TunaTopping (:TunaTopping)
+
+SubClassOf(:TunaTopping :SeafoodTopping)
+
+# Class: :VegetableTopping (:VegetableTopping)
+
+SubClassOf(:VegetableTopping :PizzaTopping)
+
+
+DisjointClasses(:AchovyTopping :PrawnTopping :TunaTopping)
+DisjointClasses(:CaperTopping :MushroomTopping :OliveTopping :OnionTopping :PepperTopping :TomatoTopping)
+DisjointClasses(:CheeseTopping :MeatTopping :SeafoodTopping :VegetableTopping)
+DisjointClasses(:GreenPepperTopping :JalapenoPepperTopping :RedPepperTopping)
+DisjointClasses(:HamTopping :PepperoniTopping :SalamiTopping :SpicyBeefTopping)
+DisjointClasses(:Pizza :PizzaBase :PizzaTopping)
+)
