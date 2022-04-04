@@ -1,0 +1,357 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/bz838fx/ontologies/2022/2/untitled-ontology-13"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/bz838fx/ontologies/2022/2/untitled-ontology-13">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Enfermedad"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Paciente"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sintoma"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tratamiento"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#esSintomaDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#esTratamientoDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#estaDiagnosticadoDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#seTrataCon"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tieneSintoma"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#codigo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#edad"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nombre"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#num_ss"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#peso"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Enf1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Enf2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pac1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pac2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sint1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sint2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sint3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sint4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Trat1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Trat2"/>
+    </Declaration>
+    <DisjointClasses>
+        <Class IRI="#Enfermedad"/>
+        <Class IRI="#Paciente"/>
+        <Class IRI="#Sintoma"/>
+        <Class IRI="#Tratamiento"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Paciente"/>
+        <NamedIndividual IRI="#Pac1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Paciente"/>
+        <NamedIndividual IRI="#Pac2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Tratamiento"/>
+        <NamedIndividual IRI="#Trat1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Tratamiento"/>
+        <NamedIndividual IRI="#Trat2"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#seTrataCon"/>
+        <NamedIndividual IRI="#Enf1"/>
+        <NamedIndividual IRI="#Trat1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneSintoma"/>
+        <NamedIndividual IRI="#Enf1"/>
+        <NamedIndividual IRI="#Sint1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneSintoma"/>
+        <NamedIndividual IRI="#Enf1"/>
+        <NamedIndividual IRI="#Sint2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneSintoma"/>
+        <NamedIndividual IRI="#Enf1"/>
+        <NamedIndividual IRI="#Sint3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#seTrataCon"/>
+        <NamedIndividual IRI="#Enf2"/>
+        <NamedIndividual IRI="#Trat2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneSintoma"/>
+        <NamedIndividual IRI="#Enf2"/>
+        <NamedIndividual IRI="#Sint3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneSintoma"/>
+        <NamedIndividual IRI="#Enf2"/>
+        <NamedIndividual IRI="#Sint4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estaDiagnosticadoDe"/>
+        <NamedIndividual IRI="#Pac1"/>
+        <NamedIndividual IRI="#Enf1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#estaDiagnosticadoDe"/>
+        <NamedIndividual IRI="#Pac2"/>
+        <NamedIndividual IRI="#Enf2"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre"/>
+        <NamedIndividual IRI="#Enf1"/>
+        <Literal>Gripe</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#codigo"/>
+        <NamedIndividual IRI="#Enf2"/>
+        <Literal>B45</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre"/>
+        <NamedIndividual IRI="#Enf2"/>
+        <Literal>Alzheimer</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#edad"/>
+        <NamedIndividual IRI="#Pac1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">35</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre"/>
+        <NamedIndividual IRI="#Pac1"/>
+        <Literal>Álvaro</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#num_ss"/>
+        <NamedIndividual IRI="#Pac1"/>
+        <Literal>A65435654</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#peso"/>
+        <NamedIndividual IRI="#Pac1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">75.6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#edad"/>
+        <NamedIndividual IRI="#Pac2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">24</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre"/>
+        <NamedIndividual IRI="#Pac2"/>
+        <Literal>Victor</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#num_ss"/>
+        <NamedIndividual IRI="#Pac2"/>
+        <Literal>71177870T</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#peso"/>
+        <NamedIndividual IRI="#Pac2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">80.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#codigo"/>
+        <NamedIndividual IRI="#Sint1"/>
+        <Literal>S1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre"/>
+        <NamedIndividual IRI="#Sint1"/>
+        <Literal>Fiebre</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#codigo"/>
+        <NamedIndividual IRI="#Sint2"/>
+        <Literal>S2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre"/>
+        <NamedIndividual IRI="#Sint2"/>
+        <Literal>Cefalea</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#codigo"/>
+        <NamedIndividual IRI="#Sint3"/>
+        <Literal>S3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre"/>
+        <NamedIndividual IRI="#Sint3"/>
+        <Literal>Perdida de memoria</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#codigo"/>
+        <NamedIndividual IRI="#Sint4"/>
+        <Literal>S4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre"/>
+        <NamedIndividual IRI="#Sint4"/>
+        <Literal>Fatiga</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#codigo"/>
+        <NamedIndividual IRI="#Trat1"/>
+        <Literal>B464</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre"/>
+        <NamedIndividual IRI="#Trat1"/>
+        <Literal>Ibuprofeno</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#codigo"/>
+        <NamedIndividual IRI="#Trat2"/>
+        <Literal>TR098</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre"/>
+        <NamedIndividual IRI="#Trat2"/>
+        <Literal>Razadyne</Literal>
+    </DataPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#esSintomaDe"/>
+        <ObjectProperty IRI="#tieneSintoma"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#esSintomaDe"/>
+        <Class IRI="#Sintoma"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#esTratamientoDe"/>
+        <Class IRI="#Tratamiento"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#seTrataCon"/>
+        <Class IRI="#Enfermedad"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tieneSintoma"/>
+        <Class IRI="#Enfermedad"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#esSintomaDe"/>
+        <Class IRI="#Enfermedad"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#esTratamientoDe"/>
+        <Class IRI="#Enfermedad"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#seTrataCon"/>
+        <Class IRI="#Tratamiento"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tieneSintoma"/>
+        <Class IRI="#Sintoma"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#codigo"/>
+        <Class IRI="#Enfermedad"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#edad"/>
+        <Class IRI="#Paciente"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nombre"/>
+        <Class IRI="#Enfermedad"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nombre"/>
+        <Class IRI="#Paciente"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nombre"/>
+        <Class IRI="#Tratamiento"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#num_ss"/>
+        <Class IRI="#Paciente"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#peso"/>
+        <Class IRI="#Paciente"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#codigo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#edad"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nombre"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#num_ss"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#peso"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
