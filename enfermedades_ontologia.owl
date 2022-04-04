@@ -6,6 +6,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.semanticweb.org/bz838fx/ontologies/2022/2/untitled-ontology-13">
+    <Prefix name="" IRI="http://www.semanticweb.org/bz838fx/ontologies/2022/2/untitled-ontology-13"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -15,6 +16,9 @@
         <Class IRI="#Enfermedad"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Medico"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Paciente"/>
     </Declaration>
     <Declaration>
@@ -22,6 +26,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Tratamiento"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Hospital"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#esSintomaDe"/>
